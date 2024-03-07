@@ -21,7 +21,7 @@
     <div class="container">
         <p><b>MyCloud</b></p>
 
-        <form method="post" action="weryfikuj1.php">
+        <form method="post" action="verify.php">
             <div class="form-group">
                 <label for="userl">Login:</label>
                 <input type="text" class="form-control" name="userl" id="userl" maxlength="20" size="20">
