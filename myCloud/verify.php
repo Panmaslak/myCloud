@@ -5,7 +5,6 @@
 </HEAD>
 <BODY>
 <?php
-//session_start();
 $date = date("Y-m-d");
 $time = date("h:i:sa");
 $user = $_POST['userl']; // login z formularza
@@ -29,9 +28,9 @@ if (!$connection)
     exit;
 }
 mysqli_query($connection, "SET NAMES 'utf8'"); // ustawienie polskich znaków
-$result = mysqli_query($connection, "SELECT * FROM users WHERE username='$user'"); // wiersza, w którym login=login z formularza
-$rekord = mysqli_fetch_array($result); // wiersza z BD, struktura zmiennej jak w BD
-if(!$rekord) //Jeśli brak, to nie ma użytkownika o podanym loginie
+$result = mysqli_query($connection, "SELECT * FROM users WHERE username='$user'"); 
+$rekord = mysqli_fetch_array($result); /
+if(!$rekord)
 {
     mysqli_close($connection); // zamknięcie połączenia z BD
     header('Location: index.php');
